@@ -89,3 +89,7 @@ setTimeout(() => {
   clearInterval(intervalId);
   console.log("Intervalo parado após 30 minutos");
 }, duracaoTotal);
+
+
+
+//VERSAO MACBOOK
