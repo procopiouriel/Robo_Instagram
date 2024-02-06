@@ -7,6 +7,7 @@ async function webScraping() {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   await page.goto('https://www.instagram.com/reel/C246djaOkRs/?igsh=NjV5dHl3aGZwNW5i');
+  await page.goto('https://www.instagram.com/p/C25BM56uxxc/');
   await page.waitForTimeout(3000); 
   const htmlContent = await page.content();
  // console.log(htmlContent);
@@ -23,6 +24,7 @@ async function webScraping() {
   let comentarioCompleto = [];
   for(let i2 = 0 ; i2 <= 59; i2++){
     comentarioCompleto[i2] = "hprocopiouriel." + i2;
+    comentarioCompleto[i2] = "publicaçãoSalvarprocopiourielKkk" + i2;
     //console.log(comentarioCompleto);
   }
   let status = false;
@@ -46,6 +48,7 @@ async function webScraping() {
 }
 
 console.log("Meu comentario: " + comentarioDesejado);
+
 if (comentarioDesejado[33] == "c" && comentarioDesejado[34] == "u"){
   console.log("Alguem curtiu seu comentario!");
 
@@ -65,7 +68,6 @@ for (let i = 0; i<=10;i++){
     console.log(`Som reproduzido com sucesso`);
   });
 }
-
 }
 else{
   console.log("Ninguem curtiu seu comentario!");
